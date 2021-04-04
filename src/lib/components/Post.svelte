@@ -1,8 +1,11 @@
 <script lang="ts">
-import Search from "./Search.svelte";
-import Spinner from "./Spinner.svelte";
+import Search from "./Search.svelte"
+import Spinner from "./Spinner.svelte"
+import { Rating } from "$lib/api"
 
 export let post: IPost|null = null
+export let rating: Rating = Rating.Safe
+
 let tags: {original: string, display: string}[] = []
 $: tags = post && post.tags
 	.split(" ")
@@ -12,17 +15,20 @@ $: tags = post && post.tags
 let loading = true
 </script>
 
-<div class="post">
-	<div class="picture">
-		{#if loading}
+<div class="post" class:loading>
+	{#if loading}
+		<div class="spinner">
 			<Spinner/>
-		{/if}
+		</div>
+	{/if}
+
+	<div class="picture">
 		{#if post}
 			<img src={post.url} alt="" on:load={()=>loading=false}>
 		{/if}
 	</div>
 
-	<Search/>
+	<Search {rating}/>
 
 	<div class="tags | flex v">
 		{#each tags as tag}
@@ -33,6 +39,7 @@ let loading = true
 
 <style>
 .post {
+	position: relative;
 	display: grid;
 	grid-template-columns: minmax(100px, 200px) 1fr;
 	grid-template-rows: auto 1fr;
@@ -44,11 +51,18 @@ let loading = true
 	padding: var(--gap);
 }
 
+.spinner {
+	grid-area: picture;
+	top: 0;
+	left: 0;
+	width: 100%;
+	max-height: 100%;
+	max-height: calc(100vh - var(--gap) * 2);
+}
+
 .picture {
 	grid-area: picture;
-	position: relative;
-	min-width: 100px;
-	height: calc(100vh - var(--gap) * 2);
+	max-height: calc(100vh - var(--gap) * 2);
 	margin-inline: auto;
 }
 .picture img {

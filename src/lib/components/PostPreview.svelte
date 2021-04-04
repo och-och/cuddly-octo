@@ -1,16 +1,19 @@
 <script lang="ts">
+import { Rating } from "$lib/api";
+
 import Spinner from "./Spinner.svelte"
 
 export let post: IPost
+export let rating: Rating = Rating.Safe
 
 let loading = true
 </script>
 
-<a href={`/post/${post.md5}`}>
+<a href={`/post/${post.md5}?f=${rating}`}>
 	{#if loading}
 		<Spinner/>
 	{/if}
-	<img on:load={()=>loading=false} src={ post.preview } alt="">
+	<img on:load={()=>loading=false} src={post.preview} alt="">
 </a>
 
 <style>

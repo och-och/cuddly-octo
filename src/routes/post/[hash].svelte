@@ -5,11 +5,10 @@ import type { LoadInput, LoadOutput } from "@sveltejs/kit/types.internal"
  * @type {import('@sveltejs/kit').Load}
  */
 export async function load({ page }: LoadInput): Promise<LoadOutput> {
-	const { hash } = page.params
-
 	return {
 		props: {
-			hash
+			hash: page.params.hash,
+			rating: page.query.get("f")
 		}
 	}
 }
@@ -18,9 +17,10 @@ export async function load({ page }: LoadInput): Promise<LoadOutput> {
 <script lang="ts">
 import Post from "$lib/components/Post.svelte"
 import { onMount } from "svelte";
-import { getPost } from "$lib/api";
+import { getPost, Rating } from "$lib/api";
 
 export let hash: string
+export let rating: Rating = Rating.Safe
 let post: IPost|null = null
 
 onMount(async () => {
@@ -28,4 +28,4 @@ onMount(async () => {
 })
 </script>
 
-<Post {post}/>
+<Post {post} {rating}/>

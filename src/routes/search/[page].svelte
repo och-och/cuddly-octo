@@ -1,4 +1,6 @@
 <script context="module" lang="ts">
+export const ssr = false
+
 import type { LoadInput, LoadOutput } from "@sveltejs/kit/types.internal"
 
 /**
@@ -8,7 +10,8 @@ export async function load({ page }: LoadInput): Promise<LoadOutput> {
 	return {
 		props: {
 			page: page.params.page,
-			query: page.query.get("q")
+			query: page.query.get("q"),
+			rating: page.query.get("f")
 		}
 	}
 }
@@ -16,23 +19,21 @@ export async function load({ page }: LoadInput): Promise<LoadOutput> {
 
 <script lang="ts">
 import PostPreview from "$lib/components/PostPreview.svelte"
-import { onMount } from "svelte";
-import { searchPosts } from "$lib/api";
+import { Rating, searchPosts } from "$lib/api";
 import Search from "$lib/components/Search.svelte";
+import Pagination from "$lib/components/Pagination.svelte";
 
 export let page: number = 1
 export let query: string = ""
+export let rating: Rating = Rating.Safe
 
-let posts: Promise<IPosts> = new Promise(()=>{})
-
-onMount(() => {
-	posts = searchPosts(page, query)
-})
+let posts: Promise<IPosts>
+$: posts = searchPosts(page, query, rating)
 </script>
 
 <main>
 	<div class="search">
-		<Search bind:query/>
+		<Search {query} {rating}/>
 	</div>
 
 	{#await posts}
@@ -41,10 +42,12 @@ onMount(() => {
 		<p class="info">found {posts.total} posts</p>
 		<div class="posts">
 			{#each posts.results as post}
-				<PostPreview {post}/>
+				<PostPreview {post} {rating}/>
 			{/each}
 		</div>
-
+		<div class="pagination">
+			<Pagination {posts} {query} {rating}/>
+		</div>
 	{:catch}
 		<p class="info">Can't load, sorry :(</p>
 	{/await}
@@ -59,6 +62,7 @@ main {
 		". search ."
 		"info info info"
 		"posts posts posts"
+		". pagination ."
 	;
 	gap: var(--gap);
 	padding: var(--gap);
@@ -76,5 +80,9 @@ main {
 	grid-area: posts;
 	display: grid;
 	grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+}
+
+.pagination {
+	grid-area: pagination;
 }
 </style>

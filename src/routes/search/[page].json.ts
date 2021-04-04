@@ -6,9 +6,8 @@ import fetch from "node-fetch"
  */
  export async function get({ params, query }: Request): Promise<Response> {
 	const { page } = params
-	const q = query.get("q")
 
-	const res = await fetch(`https://cure.ninja/booru/api/json/${page}?q=${q}`)
+	const res = await fetch(`https://cure.ninja/booru/api/json/${page}?${query.toString()}`)
 
 	return {
 		body: await res.json()

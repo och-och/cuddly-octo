@@ -1,5 +1,12 @@
-export async function searchPosts(page: number, tags: string) {
-	const res = await fetch(`/search/${page}.json?q=${tags}`)
+export const enum Rating {
+	Safe = "s",
+	Questionable = "q",
+	Explicit = "e",
+	Any = "a"
+}
+
+export async function searchPosts(page: number, tags: string, rating = Rating.Safe) {
+	const res = await fetch(`/search/${page}.json?q=${tags}&f=${rating}`)
 	if (res.ok)
 		return await res.json() as IPosts
 	else
