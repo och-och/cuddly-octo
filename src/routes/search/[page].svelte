@@ -1,4 +1,6 @@
 <script context="module" lang="ts">
+import { Rating } from "$lib/api"
+
 export const ssr = false
 
 import type { LoadInput, LoadOutput } from "@sveltejs/kit/types.internal"
@@ -11,15 +13,15 @@ export async function load({ page }: LoadInput): Promise<LoadOutput> {
 		props: {
 			page: page.params.page,
 			query: page.query.get("q"),
-			rating: page.query.get("f")
+			rating: page.query.get("f") || Rating.Safe
 		}
 	}
 }
 </script>
 
 <script lang="ts">
+import { searchPosts } from "$lib/api"
 import PostPreview from "$lib/components/PostPreview.svelte"
-import { Rating, searchPosts } from "$lib/api";
 import Search from "$lib/components/Search.svelte";
 import Pagination from "$lib/components/Pagination.svelte";
 

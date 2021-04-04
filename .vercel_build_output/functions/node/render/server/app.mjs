@@ -1972,7 +1972,7 @@ const components = [
     return _hash_;
   })
 ];
-const client_component_lookup = {".svelte/build/runtime/internal/start.js": "start-083b29c8.js", "src/routes/index.svelte": "pages/index.svelte-ff0d2f4b.js", "src/routes/search/[page].svelte": "pages/search/[page].svelte-8233c2ac.js", "src/routes/post/[hash].svelte": "pages/post/[hash].svelte-f84f1648.js"};
+const client_component_lookup = {".svelte/build/runtime/internal/start.js": "start-0ced657b.js", "src/routes/index.svelte": "pages/index.svelte-3592176e.js", "src/routes/search/[page].svelte": "pages/search/[page].svelte-5fad8c72.js", "src/routes/post/[hash].svelte": "pages/post/[hash].svelte-ed85e9f2.js"};
 const manifest = {
   assets: [{file: "favicon.ico", size: 1150, type: "image/vnd.microsoft.icon"}, {file: "robots.txt", size: 67, type: "text/plain"}],
   layout: () => Promise.resolve().then(function() {
@@ -1988,7 +1988,7 @@ const manifest = {
       params: empty,
       parts: [{id: "src/routes/index.svelte", load: components[0]}],
       css: ["assets/start-37dca156.css", "assets/pages/index.svelte-820c5bf2.css", "assets/Search-38625548.css"],
-      js: ["start-083b29c8.js", "chunks/vendor-4841e8c7.js", "chunks/singletons-6b53f818.js", "pages/index.svelte-ff0d2f4b.js", "chunks/Search-bd229d99.js"]
+      js: ["start-0ced657b.js", "chunks/vendor-2a6c42c3.js", "chunks/singletons-6b53f818.js", "pages/index.svelte-3592176e.js", "chunks/Search-19141b13.js"]
     },
     {
       type: "endpoint",
@@ -2004,7 +2004,7 @@ const manifest = {
       params: (m) => ({page: d(m[1])}),
       parts: [{id: "src/routes/search/[page].svelte", load: components[1]}],
       css: ["assets/start-37dca156.css", "assets/pages/search/[page].svelte-61dc7432.css", "assets/Search-38625548.css", "assets/Spinner-a53ecd0e.css"],
-      js: ["start-083b29c8.js", "chunks/vendor-4841e8c7.js", "chunks/singletons-6b53f818.js", "pages/search/[page].svelte-8233c2ac.js", "chunks/Search-bd229d99.js", "chunks/Spinner-d8cc8f96.js"]
+      js: ["start-0ced657b.js", "chunks/vendor-2a6c42c3.js", "chunks/singletons-6b53f818.js", "pages/search/[page].svelte-5fad8c72.js", "chunks/Search-19141b13.js", "chunks/Spinner-873bb761.js"]
     },
     {
       type: "endpoint",
@@ -2020,7 +2020,7 @@ const manifest = {
       params: (m) => ({hash: d(m[1])}),
       parts: [{id: "src/routes/post/[hash].svelte", load: components[2]}],
       css: ["assets/start-37dca156.css", "assets/pages/post/[hash].svelte-651838ff.css", "assets/Search-38625548.css", "assets/Spinner-a53ecd0e.css"],
-      js: ["start-083b29c8.js", "chunks/vendor-4841e8c7.js", "chunks/singletons-6b53f818.js", "pages/post/[hash].svelte-f84f1648.js", "chunks/Search-bd229d99.js", "chunks/Spinner-d8cc8f96.js"]
+      js: ["start-0ced657b.js", "chunks/vendor-2a6c42c3.js", "chunks/singletons-6b53f818.js", "pages/post/[hash].svelte-ed85e9f2.js", "chunks/Search-19141b13.js", "chunks/Spinner-873bb761.js"]
     }
   ]
 };
@@ -2045,7 +2045,7 @@ function render(request, {
     template,
     manifest,
     target: "body",
-    entry: "/./_app/start-083b29c8.js",
+    entry: "/./_app/start-0ced657b.js",
     root: Root,
     hooks,
     dev: false,
@@ -2194,7 +2194,7 @@ const Pagination = create_ssr_component(($$result, $$props, $$bindings, slots) =
 var _page__svelte = 'main.svelte-17f1lc9{display:grid;grid-template-columns:1fr auto 1fr;grid-template-rows:auto auto 1fr;grid-template-areas:". search ."\n		"info info info"\n		"posts posts posts"\n		". pagination ."\n	;gap:var(--gap);padding:var(--gap)}.search.svelte-17f1lc9{grid-area:search}.info.svelte-17f1lc9{grid-area:info}.posts.svelte-17f1lc9{grid-area:posts;display:grid;grid-template-columns:repeat(auto-fill, minmax(200px, 1fr))}.pagination.svelte-17f1lc9{grid-area:pagination}';
 const css$1 = {
   code: 'main.svelte-17f1lc9{display:grid;grid-template-columns:1fr auto 1fr;grid-template-rows:auto auto 1fr;grid-template-areas:". search ."\n		"info info info"\n		"posts posts posts"\n		". pagination ."\n	;gap:var(--gap);padding:var(--gap)}.search.svelte-17f1lc9{grid-area:search}.info.svelte-17f1lc9{grid-area:info}.posts.svelte-17f1lc9{grid-area:posts;display:grid;grid-template-columns:repeat(auto-fill, minmax(200px, 1fr))}.pagination.svelte-17f1lc9{grid-area:pagination}',
-  map: `{"version":3,"file":"[page].svelte","sources":["[page].svelte"],"sourcesContent":["<script context=\\"module\\" lang=\\"ts\\">var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {\\n    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }\\n    return new (P || (P = Promise))(function (resolve, reject) {\\n        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }\\n        function rejected(value) { try { step(generator[\\"throw\\"](value)); } catch (e) { reject(e); } }\\n        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }\\n        step((generator = generator.apply(thisArg, _arguments || [])).next());\\n    });\\n};\\nexport const ssr = false;\\n;\\n/**\\n * @type {import('@sveltejs/kit').Load}\\n */\\nexport function load({ page }) {\\n    return __awaiter(this, void 0, void 0, function* () {\\n        return {\\n            props: {\\n                page: page.params.page,\\n                query: page.query.get(\\"q\\"),\\n                rating: page.query.get(\\"f\\")\\n            }\\n        };\\n    });\\n}\\n</script>\\n\\n<script lang=\\"ts\\">import PostPreview from \\"$lib/components/PostPreview.svelte\\";\\nimport { Rating, searchPosts } from \\"$lib/api\\";\\nimport Search from \\"$lib/components/Search.svelte\\";\\nimport Pagination from \\"$lib/components/Pagination.svelte\\";\\nexport let page = 1;\\nexport let query = \\"\\";\\nexport let rating = Rating.Safe;\\nlet posts;\\n$: posts = searchPosts(page, query, rating);\\n</script>\\n\\n<main>\\n\\t<div class=\\"search\\">\\n\\t\\t<Search {query} {rating}/>\\n\\t</div>\\n\\n\\t{#await posts}\\n\\t\\t<p class=\\"info\\">Searching...</p>\\n\\t{:then posts}\\n\\t\\t<p class=\\"info\\">found {posts.total} posts</p>\\n\\t\\t<div class=\\"posts\\">\\n\\t\\t\\t{#each posts.results as post}\\n\\t\\t\\t\\t<PostPreview {post} {rating}/>\\n\\t\\t\\t{/each}\\n\\t\\t</div>\\n\\t\\t<div class=\\"pagination\\">\\n\\t\\t\\t<Pagination {posts} {query} {rating}/>\\n\\t\\t</div>\\n\\t{:catch}\\n\\t\\t<p class=\\"info\\">Can't load, sorry :(</p>\\n\\t{/await}\\n</main>\\n\\n<style>\\nmain {\\n\\tdisplay: grid;\\n\\tgrid-template-columns: 1fr auto 1fr;\\n\\tgrid-template-rows: auto auto 1fr;\\n\\tgrid-template-areas:\\n\\t\\t\\". search .\\"\\n\\t\\t\\"info info info\\"\\n\\t\\t\\"posts posts posts\\"\\n\\t\\t\\". pagination .\\"\\n\\t;\\n\\tgap: var(--gap);\\n\\tpadding: var(--gap);\\n}\\n\\n.search {\\n\\tgrid-area: search;\\n}\\n\\n.info {\\n\\tgrid-area: info;\\n}\\n\\n.posts {\\n\\tgrid-area: posts;\\n\\tdisplay: grid;\\n\\tgrid-template-columns: repeat(auto-fill, minmax(200px, 1fr));\\n}\\n\\n.pagination {\\n\\tgrid-area: pagination;\\n}\\n</style>"],"names":[],"mappings":"AA6DA,IAAI,eAAC,CAAC,AACL,OAAO,CAAE,IAAI,CACb,qBAAqB,CAAE,GAAG,CAAC,IAAI,CAAC,GAAG,CACnC,kBAAkB,CAAE,IAAI,CAAC,IAAI,CAAC,GAAG,CACjC,mBAAmB,CAClB,YAAY;EACZ,gBAAgB;EAChB,mBAAmB;EACnB,gBAAgB;CACjB,CACA,GAAG,CAAE,IAAI,KAAK,CAAC,CACf,OAAO,CAAE,IAAI,KAAK,CAAC,AACpB,CAAC,AAED,OAAO,eAAC,CAAC,AACR,SAAS,CAAE,MAAM,AAClB,CAAC,AAED,KAAK,eAAC,CAAC,AACN,SAAS,CAAE,IAAI,AAChB,CAAC,AAED,MAAM,eAAC,CAAC,AACP,SAAS,CAAE,KAAK,CAChB,OAAO,CAAE,IAAI,CACb,qBAAqB,CAAE,OAAO,SAAS,CAAC,CAAC,OAAO,KAAK,CAAC,CAAC,GAAG,CAAC,CAAC,AAC7D,CAAC,AAED,WAAW,eAAC,CAAC,AACZ,SAAS,CAAE,UAAU,AACtB,CAAC"}`
+  map: `{"version":3,"file":"[page].svelte","sources":["[page].svelte"],"sourcesContent":["<script context=\\"module\\" lang=\\"ts\\">var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {\\n    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }\\n    return new (P || (P = Promise))(function (resolve, reject) {\\n        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }\\n        function rejected(value) { try { step(generator[\\"throw\\"](value)); } catch (e) { reject(e); } }\\n        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }\\n        step((generator = generator.apply(thisArg, _arguments || [])).next());\\n    });\\n};\\nimport { Rating } from \\"$lib/api\\";\\nexport const ssr = false;\\n;\\n/**\\n * @type {import('@sveltejs/kit').Load}\\n */\\nexport function load({ page }) {\\n    return __awaiter(this, void 0, void 0, function* () {\\n        return {\\n            props: {\\n                page: page.params.page,\\n                query: page.query.get(\\"q\\"),\\n                rating: page.query.get(\\"f\\") || Rating.Safe\\n            }\\n        };\\n    });\\n}\\n</script>\\n\\n<script lang=\\"ts\\">import { searchPosts } from \\"$lib/api\\";\\nimport PostPreview from \\"$lib/components/PostPreview.svelte\\";\\nimport Search from \\"$lib/components/Search.svelte\\";\\nimport Pagination from \\"$lib/components/Pagination.svelte\\";\\nexport let page = 1;\\nexport let query = \\"\\";\\nexport let rating = Rating.Safe;\\nlet posts;\\n$: posts = searchPosts(page, query, rating);\\n</script>\\n\\n<main>\\n\\t<div class=\\"search\\">\\n\\t\\t<Search {query} {rating}/>\\n\\t</div>\\n\\n\\t{#await posts}\\n\\t\\t<p class=\\"info\\">Searching...</p>\\n\\t{:then posts}\\n\\t\\t<p class=\\"info\\">found {posts.total} posts</p>\\n\\t\\t<div class=\\"posts\\">\\n\\t\\t\\t{#each posts.results as post}\\n\\t\\t\\t\\t<PostPreview {post} {rating}/>\\n\\t\\t\\t{/each}\\n\\t\\t</div>\\n\\t\\t<div class=\\"pagination\\">\\n\\t\\t\\t<Pagination {posts} {query} {rating}/>\\n\\t\\t</div>\\n\\t{:catch}\\n\\t\\t<p class=\\"info\\">Can't load, sorry :(</p>\\n\\t{/await}\\n</main>\\n\\n<style>\\nmain {\\n\\tdisplay: grid;\\n\\tgrid-template-columns: 1fr auto 1fr;\\n\\tgrid-template-rows: auto auto 1fr;\\n\\tgrid-template-areas:\\n\\t\\t\\". search .\\"\\n\\t\\t\\"info info info\\"\\n\\t\\t\\"posts posts posts\\"\\n\\t\\t\\". pagination .\\"\\n\\t;\\n\\tgap: var(--gap);\\n\\tpadding: var(--gap);\\n}\\n\\n.search {\\n\\tgrid-area: search;\\n}\\n\\n.info {\\n\\tgrid-area: info;\\n}\\n\\n.posts {\\n\\tgrid-area: posts;\\n\\tdisplay: grid;\\n\\tgrid-template-columns: repeat(auto-fill, minmax(200px, 1fr));\\n}\\n\\n.pagination {\\n\\tgrid-area: pagination;\\n}\\n</style>"],"names":[],"mappings":"AA8DA,IAAI,eAAC,CAAC,AACL,OAAO,CAAE,IAAI,CACb,qBAAqB,CAAE,GAAG,CAAC,IAAI,CAAC,GAAG,CACnC,kBAAkB,CAAE,IAAI,CAAC,IAAI,CAAC,GAAG,CACjC,mBAAmB,CAClB,YAAY;EACZ,gBAAgB;EAChB,mBAAmB;EACnB,gBAAgB;CACjB,CACA,GAAG,CAAE,IAAI,KAAK,CAAC,CACf,OAAO,CAAE,IAAI,KAAK,CAAC,AACpB,CAAC,AAED,OAAO,eAAC,CAAC,AACR,SAAS,CAAE,MAAM,AAClB,CAAC,AAED,KAAK,eAAC,CAAC,AACN,SAAS,CAAE,IAAI,AAChB,CAAC,AAED,MAAM,eAAC,CAAC,AACP,SAAS,CAAE,KAAK,CAChB,OAAO,CAAE,IAAI,CACb,qBAAqB,CAAE,OAAO,SAAS,CAAC,CAAC,OAAO,KAAK,CAAC,CAAC,GAAG,CAAC,CAAC,AAC7D,CAAC,AAED,WAAW,eAAC,CAAC,AACZ,SAAS,CAAE,UAAU,AACtB,CAAC"}`
 };
 var __awaiter$1 = function(thisArg, _arguments, P, generator) {
   function adopt(value) {
@@ -2230,7 +2230,7 @@ function load$1({page}) {
       props: {
         page: page.params.page,
         query: page.query.get("q"),
-        rating: page.query.get("f")
+        rating: page.query.get("f") || Rating.Safe
       }
     };
   });
@@ -2272,33 +2272,11 @@ var _page_ = /* @__PURE__ */ Object.freeze({
   ssr,
   load: load$1
 });
-var Post_svelte = '.post.svelte-vt8vet.svelte-vt8vet{position:relative;display:grid;grid-template-columns:minmax(100px, 200px) 1fr;grid-template-rows:auto 1fr;grid-template-areas:"search picture"\n		"tags   picture"\n	;gap:var(--gap);padding:var(--gap)}.spinner.svelte-vt8vet.svelte-vt8vet{grid-area:picture;top:0;left:0;width:100%;max-height:100%;max-height:calc(100vh - var(--gap) * 2)}.picture.svelte-vt8vet.svelte-vt8vet{grid-area:picture;max-height:calc(100vh - var(--gap) * 2);margin-inline:auto}.picture.svelte-vt8vet img.svelte-vt8vet{max-width:100%;max-height:calc(100vh - var(--gap) * 2)}.tags.svelte-vt8vet.svelte-vt8vet{grid-area:tags;align-content:flex-start;gap:0}.tag.svelte-vt8vet.svelte-vt8vet{font-size:.9rem;text-decoration:none}@media screen and (max-width: 700px){.post.svelte-vt8vet.svelte-vt8vet{grid-template-columns:1fr;grid-template-rows:repeat(3, auto);grid-template-areas:"picture"\n			"search"\n			"tags"\n		}}';
+var _hash__svelte = '.post.svelte-vt8vet.svelte-vt8vet{position:relative;display:grid;grid-template-columns:minmax(100px, 200px) 1fr;grid-template-rows:auto 1fr;grid-template-areas:"search picture"\n		"tags   picture"\n	;gap:var(--gap);padding:var(--gap)}.spinner.svelte-vt8vet.svelte-vt8vet{grid-area:picture;top:0;left:0;width:100%;max-height:100%;max-height:calc(100vh - var(--gap) * 2)}.picture.svelte-vt8vet.svelte-vt8vet{grid-area:picture;max-height:calc(100vh - var(--gap) * 2);margin-inline:auto}.picture.svelte-vt8vet img.svelte-vt8vet{max-width:100%;max-height:calc(100vh - var(--gap) * 2)}.tags.svelte-vt8vet.svelte-vt8vet{grid-area:tags;align-content:flex-start;gap:0}.tag.svelte-vt8vet.svelte-vt8vet{font-size:.9rem;text-decoration:none}@media screen and (max-width: 700px){.post.svelte-vt8vet.svelte-vt8vet{grid-template-columns:1fr;grid-template-rows:repeat(3, auto);grid-template-areas:"picture"\n			"search"\n			"tags"\n		}}';
 const css = {
   code: '.post.svelte-vt8vet.svelte-vt8vet{position:relative;display:grid;grid-template-columns:minmax(100px, 200px) 1fr;grid-template-rows:auto 1fr;grid-template-areas:"search picture"\n		"tags   picture"\n	;gap:var(--gap);padding:var(--gap)}.spinner.svelte-vt8vet.svelte-vt8vet{grid-area:picture;top:0;left:0;width:100%;max-height:100%;max-height:calc(100vh - var(--gap) * 2)}.picture.svelte-vt8vet.svelte-vt8vet{grid-area:picture;max-height:calc(100vh - var(--gap) * 2);margin-inline:auto}.picture.svelte-vt8vet img.svelte-vt8vet{max-width:100%;max-height:calc(100vh - var(--gap) * 2)}.tags.svelte-vt8vet.svelte-vt8vet{grid-area:tags;align-content:flex-start;gap:0}.tag.svelte-vt8vet.svelte-vt8vet{font-size:.9rem;text-decoration:none}@media screen and (max-width: 700px){.post.svelte-vt8vet.svelte-vt8vet{grid-template-columns:1fr;grid-template-rows:repeat(3, auto);grid-template-areas:"picture"\n			"search"\n			"tags"\n		}}',
-  map: '{"version":3,"file":"Post.svelte","sources":["Post.svelte"],"sourcesContent":["<script lang=\\"ts\\">import Search from \\"./Search.svelte\\";\\nimport Spinner from \\"./Spinner.svelte\\";\\nimport { Rating } from \\"$lib/api\\";\\nexport let post = null;\\nexport let rating = Rating.Safe;\\nlet tags = [];\\n$: tags = post && post.tags\\n    .split(\\" \\")\\n    .map(tag => ({ original: tag, display: tag.replace(\\"_\\", \\" \\") }))\\n    || [];\\nlet loading = true;\\n</script>\\n\\n<div class=\\"post\\" class:loading>\\n\\t{#if loading}\\n\\t\\t<div class=\\"spinner\\">\\n\\t\\t\\t<Spinner/>\\n\\t\\t</div>\\n\\t{/if}\\n\\n\\t<div class=\\"picture\\">\\n\\t\\t{#if post}\\n\\t\\t\\t<img src={post.url} alt=\\"\\" on:load={()=>loading=false}>\\n\\t\\t{/if}\\n\\t</div>\\n\\n\\t<Search {rating}/>\\n\\n\\t<div class=\\"tags | flex v\\">\\n\\t\\t{#each tags as tag}\\n\\t\\t\\t<a class=\\"tag\\" href={`/search/1?q=${tag.original}`}>{tag.display}</a>\\n\\t\\t{/each}\\n\\t</div>\\n</div>\\n\\n<style>\\n.post {\\n\\tposition: relative;\\n\\tdisplay: grid;\\n\\tgrid-template-columns: minmax(100px, 200px) 1fr;\\n\\tgrid-template-rows: auto 1fr;\\n\\tgrid-template-areas:\\n\\t\\t\\"search picture\\"\\n\\t\\t\\"tags   picture\\"\\n\\t;\\n\\tgap: var(--gap);\\n\\tpadding: var(--gap);\\n}\\n\\n.spinner {\\n\\tgrid-area: picture;\\n\\ttop: 0;\\n\\tleft: 0;\\n\\twidth: 100%;\\n\\tmax-height: 100%;\\n\\tmax-height: calc(100vh - var(--gap) * 2);\\n}\\n\\n.picture {\\n\\tgrid-area: picture;\\n\\tmax-height: calc(100vh - var(--gap) * 2);\\n\\tmargin-inline: auto;\\n}\\n.picture img {\\n\\tmax-width: 100%;\\n\\tmax-height: calc(100vh - var(--gap) * 2);\\n}\\n\\n.tags {\\n\\tgrid-area: tags;\\n\\talign-content: flex-start;\\n\\tgap: 0;\\n}\\n\\n.tag {\\n\\tfont-size: .9rem;\\n\\ttext-decoration: none;\\n}\\n\\n@media screen and (max-width: 700px) {\\n\\t.post {\\n\\t\\tgrid-template-columns: 1fr;\\n\\t\\tgrid-template-rows: repeat(3, auto);\\n\\t\\tgrid-template-areas:\\n\\t\\t\\t\\"picture\\"\\n\\t\\t\\t\\"search\\"\\n\\t\\t\\t\\"tags\\"\\n\\t\\t;\\n\\t}\\n}\\n</style>"],"names":[],"mappings":"AAoCA,KAAK,4BAAC,CAAC,AACN,QAAQ,CAAE,QAAQ,CAClB,OAAO,CAAE,IAAI,CACb,qBAAqB,CAAE,OAAO,KAAK,CAAC,CAAC,KAAK,CAAC,CAAC,GAAG,CAC/C,kBAAkB,CAAE,IAAI,CAAC,GAAG,CAC5B,mBAAmB,CAClB,gBAAgB;EAChB,gBAAgB;CACjB,CACA,GAAG,CAAE,IAAI,KAAK,CAAC,CACf,OAAO,CAAE,IAAI,KAAK,CAAC,AACpB,CAAC,AAED,QAAQ,4BAAC,CAAC,AACT,SAAS,CAAE,OAAO,CAClB,GAAG,CAAE,CAAC,CACN,IAAI,CAAE,CAAC,CACP,KAAK,CAAE,IAAI,CACX,UAAU,CAAE,IAAI,CAChB,UAAU,CAAE,KAAK,KAAK,CAAC,CAAC,CAAC,IAAI,KAAK,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,AACzC,CAAC,AAED,QAAQ,4BAAC,CAAC,AACT,SAAS,CAAE,OAAO,CAClB,UAAU,CAAE,KAAK,KAAK,CAAC,CAAC,CAAC,IAAI,KAAK,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CACxC,aAAa,CAAE,IAAI,AACpB,CAAC,AACD,sBAAQ,CAAC,GAAG,cAAC,CAAC,AACb,SAAS,CAAE,IAAI,CACf,UAAU,CAAE,KAAK,KAAK,CAAC,CAAC,CAAC,IAAI,KAAK,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,AACzC,CAAC,AAED,KAAK,4BAAC,CAAC,AACN,SAAS,CAAE,IAAI,CACf,aAAa,CAAE,UAAU,CACzB,GAAG,CAAE,CAAC,AACP,CAAC,AAED,IAAI,4BAAC,CAAC,AACL,SAAS,CAAE,KAAK,CAChB,eAAe,CAAE,IAAI,AACtB,CAAC,AAED,OAAO,MAAM,CAAC,GAAG,CAAC,YAAY,KAAK,CAAC,AAAC,CAAC,AACrC,KAAK,4BAAC,CAAC,AACN,qBAAqB,CAAE,GAAG,CAC1B,kBAAkB,CAAE,OAAO,CAAC,CAAC,CAAC,IAAI,CAAC,CACnC,mBAAmB,CAClB,SAAS;GACT,QAAQ;GACR,MAAM;EACP,AACD,CAAC,AACF,CAAC"}'
+  map: '{"version":3,"file":"[hash].svelte","sources":["[hash].svelte"],"sourcesContent":["<script context=\\"module\\" lang=\\"ts\\">var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {\\n    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }\\n    return new (P || (P = Promise))(function (resolve, reject) {\\n        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }\\n        function rejected(value) { try { step(generator[\\"throw\\"](value)); } catch (e) { reject(e); } }\\n        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }\\n        step((generator = generator.apply(thisArg, _arguments || [])).next());\\n    });\\n};\\n;\\n/**\\n * @type {import(\'@sveltejs/kit\').Load}\\n */\\nexport function load({ page }) {\\n    return __awaiter(this, void 0, void 0, function* () {\\n        return {\\n            props: {\\n                hash: page.params.hash,\\n                rating: page.query.get(\\"f\\")\\n            }\\n        };\\n    });\\n}\\n</script>\\n\\n<script lang=\\"ts\\">var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {\\n    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }\\n    return new (P || (P = Promise))(function (resolve, reject) {\\n        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }\\n        function rejected(value) { try { step(generator[\\"throw\\"](value)); } catch (e) { reject(e); } }\\n        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }\\n        step((generator = generator.apply(thisArg, _arguments || [])).next());\\n    });\\n};\\nimport { onMount } from \\"svelte\\";\\nimport { getPost, Rating } from \\"$lib/api\\";\\nimport Search from \\"$lib/components/Search.svelte\\";\\nimport Spinner from \\"$lib/components/Spinner.svelte\\";\\nexport let hash;\\nexport let rating = Rating.Safe;\\nlet post = null;\\nonMount(() => __awaiter(void 0, void 0, void 0, function* () {\\n    post = yield getPost(hash);\\n}));\\nlet tags = [];\\n$: tags = post && post.tags\\n    .split(\\" \\")\\n    .map(tag => ({ original: tag, display: tag.replace(\\"_\\", \\" \\") }))\\n    || [];\\nlet loading = true;\\n</script>\\n\\n<div class=\\"post\\" class:loading>\\n\\t{#if loading}\\n\\t\\t<div class=\\"spinner\\">\\n\\t\\t\\t<Spinner/>\\n\\t\\t</div>\\n\\t{/if}\\n\\n\\t<div class=\\"picture\\">\\n\\t\\t{#if post}\\n\\t\\t\\t<img src={post.url} alt=\\"\\" on:load={()=>loading=false}>\\n\\t\\t{/if}\\n\\t</div>\\n\\n\\t<Search bind:rating/>\\n\\n\\t<div class=\\"tags | flex v\\">\\n\\t\\t{#each tags as tag}\\n\\t\\t\\t<a class=\\"tag\\" href={`/search/1?q=${tag.original}&f=${rating}`}>{tag.display}</a>\\n\\t\\t{/each}\\n\\t</div>\\n</div>\\n\\n<style>\\n.post {\\n\\tposition: relative;\\n\\tdisplay: grid;\\n\\tgrid-template-columns: minmax(100px, 200px) 1fr;\\n\\tgrid-template-rows: auto 1fr;\\n\\tgrid-template-areas:\\n\\t\\t\\"search picture\\"\\n\\t\\t\\"tags   picture\\"\\n\\t;\\n\\tgap: var(--gap);\\n\\tpadding: var(--gap);\\n}\\n\\n.spinner {\\n\\tgrid-area: picture;\\n\\ttop: 0;\\n\\tleft: 0;\\n\\twidth: 100%;\\n\\tmax-height: 100%;\\n\\tmax-height: calc(100vh - var(--gap) * 2);\\n}\\n\\n.picture {\\n\\tgrid-area: picture;\\n\\tmax-height: calc(100vh - var(--gap) * 2);\\n\\tmargin-inline: auto;\\n}\\n.picture img {\\n\\tmax-width: 100%;\\n\\tmax-height: calc(100vh - var(--gap) * 2);\\n}\\n\\n.tags {\\n\\tgrid-area: tags;\\n\\talign-content: flex-start;\\n\\tgap: 0;\\n}\\n\\n.tag {\\n\\tfont-size: .9rem;\\n\\ttext-decoration: none;\\n}\\n\\n@media screen and (max-width: 700px) {\\n\\t.post {\\n\\t\\tgrid-template-columns: 1fr;\\n\\t\\tgrid-template-rows: repeat(3, auto);\\n\\t\\tgrid-template-areas:\\n\\t\\t\\t\\"picture\\"\\n\\t\\t\\t\\"search\\"\\n\\t\\t\\t\\"tags\\"\\n\\t\\t;\\n\\t}\\n}\\n</style>"],"names":[],"mappings":"AA2EA,KAAK,4BAAC,CAAC,AACN,QAAQ,CAAE,QAAQ,CAClB,OAAO,CAAE,IAAI,CACb,qBAAqB,CAAE,OAAO,KAAK,CAAC,CAAC,KAAK,CAAC,CAAC,GAAG,CAC/C,kBAAkB,CAAE,IAAI,CAAC,GAAG,CAC5B,mBAAmB,CAClB,gBAAgB;EAChB,gBAAgB;CACjB,CACA,GAAG,CAAE,IAAI,KAAK,CAAC,CACf,OAAO,CAAE,IAAI,KAAK,CAAC,AACpB,CAAC,AAED,QAAQ,4BAAC,CAAC,AACT,SAAS,CAAE,OAAO,CAClB,GAAG,CAAE,CAAC,CACN,IAAI,CAAE,CAAC,CACP,KAAK,CAAE,IAAI,CACX,UAAU,CAAE,IAAI,CAChB,UAAU,CAAE,KAAK,KAAK,CAAC,CAAC,CAAC,IAAI,KAAK,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,AACzC,CAAC,AAED,QAAQ,4BAAC,CAAC,AACT,SAAS,CAAE,OAAO,CAClB,UAAU,CAAE,KAAK,KAAK,CAAC,CAAC,CAAC,IAAI,KAAK,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CACxC,aAAa,CAAE,IAAI,AACpB,CAAC,AACD,sBAAQ,CAAC,GAAG,cAAC,CAAC,AACb,SAAS,CAAE,IAAI,CACf,UAAU,CAAE,KAAK,KAAK,CAAC,CAAC,CAAC,IAAI,KAAK,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,AACzC,CAAC,AAED,KAAK,4BAAC,CAAC,AACN,SAAS,CAAE,IAAI,CACf,aAAa,CAAE,UAAU,CACzB,GAAG,CAAE,CAAC,AACP,CAAC,AAED,IAAI,4BAAC,CAAC,AACL,SAAS,CAAE,KAAK,CAChB,eAAe,CAAE,IAAI,AACtB,CAAC,AAED,OAAO,MAAM,CAAC,GAAG,CAAC,YAAY,KAAK,CAAC,AAAC,CAAC,AACrC,KAAK,4BAAC,CAAC,AACN,qBAAqB,CAAE,GAAG,CAC1B,kBAAkB,CAAE,OAAO,CAAC,CAAC,CAAC,IAAI,CAAC,CACnC,mBAAmB,CAClB,SAAS;GACT,QAAQ;GACR,MAAM;EACP,AACD,CAAC,AACF,CAAC"}'
 };
-const Post = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-  let {post = null} = $$props;
-  let {rating = Rating.Safe} = $$props;
-  let tags = [];
-  if ($$props.post === void 0 && $$bindings.post && post !== void 0)
-    $$bindings.post(post);
-  if ($$props.rating === void 0 && $$bindings.rating && rating !== void 0)
-    $$bindings.rating(rating);
-  $$result.css.add(css);
-  tags = post && post.tags.split(" ").map((tag) => ({
-    original: tag,
-    display: tag.replace("_", " ")
-  })) || [];
-  return `<div class="${["post svelte-vt8vet", "loading"].join(" ").trim()}">${`<div class="${"spinner svelte-vt8vet"}">${validate_component(Spinner, "Spinner").$$render($$result, {}, {}, {})}</div>`}
-
-	<div class="${"picture svelte-vt8vet"}">${post ? `<img${add_attribute("src", post.url, 0)} alt="${""}" class="${"svelte-vt8vet"}">` : ``}</div>
-
-	${validate_component(Search, "Search").$$render($$result, {rating}, {}, {})}
-
-	<div class="${"tags | flex v svelte-vt8vet"}">${each(tags, (tag) => `<a class="${"tag svelte-vt8vet"}"${add_attribute("href", `/search/1?q=${tag.original}`, 0)}>${escape(tag.display)}</a>`)}</div>
-</div>`;
-});
 var __awaiter = function(thisArg, _arguments, P, generator) {
   function adopt(value) {
     return value instanceof P ? value : new P(function(resolve2) {
@@ -2370,11 +2348,35 @@ const U5Bhashu5D = create_ssr_component(($$result, $$props, $$bindings, slots) =
   onMount(() => __awaiter2(void 0, void 0, void 0, function* () {
     post = yield getPost(hash);
   }));
+  let tags = [];
   if ($$props.hash === void 0 && $$bindings.hash && hash !== void 0)
     $$bindings.hash(hash);
   if ($$props.rating === void 0 && $$bindings.rating && rating !== void 0)
     $$bindings.rating(rating);
-  return `${validate_component(Post, "Post").$$render($$result, {post, rating}, {}, {})}`;
+  $$result.css.add(css);
+  let $$settled;
+  let $$rendered;
+  do {
+    $$settled = true;
+    tags = post && post.tags.split(" ").map((tag) => ({
+      original: tag,
+      display: tag.replace("_", " ")
+    })) || [];
+    $$rendered = `<div class="${["post svelte-vt8vet", "loading"].join(" ").trim()}">${`<div class="${"spinner svelte-vt8vet"}">${validate_component(Spinner, "Spinner").$$render($$result, {}, {}, {})}</div>`}
+
+	<div class="${"picture svelte-vt8vet"}">${post ? `<img${add_attribute("src", post.url, 0)} alt="${""}" class="${"svelte-vt8vet"}">` : ``}</div>
+
+	${validate_component(Search, "Search").$$render($$result, {rating}, {
+      rating: ($$value) => {
+        rating = $$value;
+        $$settled = false;
+      }
+    }, {})}
+
+	<div class="${"tags | flex v svelte-vt8vet"}">${each(tags, (tag) => `<a class="${"tag svelte-vt8vet"}"${add_attribute("href", `/search/1?q=${tag.original}&f=${rating}`, 0)}>${escape(tag.display)}</a>`)}</div>
+</div>`;
+  } while (!$$settled);
+  return $$rendered;
 });
 var _hash_ = /* @__PURE__ */ Object.freeze({
   __proto__: null,
