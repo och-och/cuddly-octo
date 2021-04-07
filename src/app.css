@@ -7,7 +7,16 @@
 
 :root {
 	--gap: 1rem;
+	--radius: .4rem;
+
+	--color: #4c72f1;
+	--font-on-color: #ffffff;
+	--font: #333;
+}
+
+html {
 	font-family: sans-serif;
+	background-color: var(--back);
 }
 
 .flex {
@@ -19,4 +28,51 @@
 }
 .flex.wrap {
 	flex-wrap: wrap;
+}
+
+.button, .select {
+	min-width: 1em;
+	line-height: 1em;
+	padding: .6rem 1rem;
+
+	appearance: none;
+
+	text-align: center;
+	text-decoration: none;
+	color: var(--font-on-color);
+
+	background: var(--color);
+	border: none;
+	border-radius: var(--radius);
+
+	transition: .2s;
+}
+
+.input {
+	min-width: 1em;
+	line-height: 1em;
+	padding: .2rem .4rem;
+
+	appearance: none;
+
+	text-align: left;
+	text-decoration: none;
+	color: var(--font);
+
+	background: #FFF;
+	border: 2px solid var(--color);
+	border-radius: var(--radius);
+
+	transition: .2s;
+}
+
+:is(.button, .select, .input):focus {
+	outline: none;
+	box-shadow: 0 0 0 .1rem var(--color);
+}
+
+:is(.button, .select, .input).disabled {
+	color: var(--font);
+	background: #DDD;
+	cursor: default;
 }

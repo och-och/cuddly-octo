@@ -52,7 +52,7 @@ let loading = true
 
 	<Search bind:rating/>
 
-	<div class="tags | flex v">
+	<div class="tags | flex wrap">
 		{#each tags as tag}
 			<a class="tag" href={`/search/1?q=${tag.original}&f=${rating}`}>{tag.display}</a>
 		{/each}
@@ -63,7 +63,7 @@ let loading = true
 .post {
 	position: relative;
 	display: grid;
-	grid-template-columns: minmax(100px, 200px) 1fr;
+	grid-template-columns: minmax(200px, 300px) 1fr;
 	grid-template-rows: auto 1fr;
 	grid-template-areas:
 		"search picture"
@@ -90,17 +90,27 @@ let loading = true
 .picture img {
 	max-width: 100%;
 	max-height: calc(100vh - var(--gap) * 2);
+	border: 1px solid var(--color);
+	border-radius: var(--radius);
 }
 
 .tags {
 	grid-area: tags;
 	align-content: flex-start;
-	gap: 0;
+	gap: .2rem;
 }
 
 .tag {
+	flex-grow: 1;
+	padding: .4rem .6rem;
+	text-align: center;
+
 	font-size: .9rem;
 	text-decoration: none;
+	color: var(--font-on-color);
+
+	background: var(--color);
+	border-radius: var(--radius);
 }
 
 @media screen and (max-width: 700px) {

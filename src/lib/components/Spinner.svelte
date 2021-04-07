@@ -15,7 +15,7 @@
 .spinner {
 	width: 100px;
 	height: 100px;
-	border: var(--gap) solid #0005;
+	border: var(--gap) solid var(--color);
 	border-top-color: transparent;
 	border-radius: 50%;
 	animation: forwards infinite linear 1s spin;

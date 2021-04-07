@@ -6,7 +6,7 @@ export let posts: IPosts
 export let query = ""
 export let rating: Rating = Rating.Safe
 
-let pages = []
+let pages: number[] = []
 $: pages = generatePages(posts)
 
 function generatePages(posts: IPosts) {
@@ -29,7 +29,7 @@ function generatePages(posts: IPosts) {
 
 <div class="pagination | flex wrap">
 	{#each pages as page}
-		<Button link={`/search/${page}?q=${query}&f=${rating}`}>{page}</Button>
+		<Button link={`/search/${page}?q=${query}&f=${rating}`} disabled={page == posts.page+1}>{page}</Button>
 	{/each}
 </div>
 

@@ -11,17 +11,27 @@ function search() {
 </script>
 
 <form class="flex" on:submit|preventDefault={search}>
-	<select bind:value={rating}>
-		<option value={Rating.Safe}>Safe</option>
-		<option value={Rating.Questionable}>Horny</option>
-		<option value={Rating.Explicit}>Hentai</option>
-		<option value={Rating.Any}>Any</option>
+	<select class="select" bind:value={rating}>
+		<option value={Rating.Safe}>S</option>
+		<option value={Rating.Questionable}>Q</option>
+		<option value={Rating.Explicit}>E</option>
+		<option value={Rating.Any}>A</option>
 	</select>
-	<input type="search" bind:value={query}>
+	<input class="input" type="search" placeholder="Search" bind:value={query}>
 </form>
 
 <style>
-input {
+.flex {
+	gap: 0;
+}
+.input {
 	width: 100%;
+	border-bottom-left-radius: 0;
+	border-top-left-radius: 0;
+}
+.select {
+	flex-grow: 1;
+	border-bottom-right-radius: 0;
+	border-top-right-radius: 0;
 }
 </style>
